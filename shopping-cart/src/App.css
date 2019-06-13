@@ -1,0 +1,23 @@
+img{
+  width: 220px;
+  height: 250px;
+}
+
+.card-content{
+  height: 75px;
+  width: auto;
+}
+
+.tileText{
+  height: auto;
+  width: auto;
+}
+
+.item-quantity{
+  padding:5px;
+  font-weight: bold;
+}
+
+.cart-icon {
+  color: #bbdefb;
+}
