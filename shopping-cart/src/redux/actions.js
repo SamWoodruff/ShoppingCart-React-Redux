@@ -9,3 +9,6 @@ export const updateQuantity = (cart) => ({type:UPDATE_QUANTITY,payload:cart})
 
 export const CONFIRM_CHECKOUT = "CONFIRM_CHECKOUT"
 export const confirmCheckout = () =>({type:CONFIRM_CHECKOUT})
+
+export const UNDO = "UNDO"
+export const undo = () =>({type:UNDO})

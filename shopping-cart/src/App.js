@@ -11,13 +11,16 @@ import { items3 } from "./ShoppingCartData3";
 const Home = items => {
   return (
     <div className="row">
-      <div className="col s2">
+      <div className="col s3 m2">
         <Cart />
-        <Link to="/checkout">  <button className="btn-small #ff7043 deep-orange lighten-1 waves-effect waves-light" type="submit" name="action">Checkout
+        <div className='row'>
+  
+        <Link to="/checkout" className='col s12 row'>  <button className="btn-small #ff7043 col s12 deep-orange lighten-1 waves-effect waves-light" type="submit" name="action">Checkout
     <i className="material-icons right">send</i>
-  </button></Link>
+  </button></Link></div>
       </div>
-      <div className="col s10">
+     
+      <div className="col s9 m210">
         <HomePage items={items} />
       </div>
     </div>
@@ -26,8 +29,12 @@ const Home = items => {
 
 const checkout = () => {
   return (
-    <div className="checkout-page center">
+    <div className='row'>
+    <div className='col s2 m4 l5'/>
+    <div className="checkout-page center col s8 m4 l2">
       <Checkout />
+    </div>
+    <div className='col s2 m4 l5'/>
     </div>
   );
 };

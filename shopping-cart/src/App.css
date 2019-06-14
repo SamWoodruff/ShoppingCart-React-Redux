@@ -4,8 +4,9 @@ img{
 }
 
 .card-content{
-  height: 75px;
+  height: 100px;
   width: auto;
+
 }
 
 .tileText{
@@ -15,9 +16,14 @@ img{
 
 .item-quantity{
   padding:5px;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
 .cart-icon {
-  color: #bbdefb;
+  
+}
+
+.bold {
+  font-weight: bold;
 }
