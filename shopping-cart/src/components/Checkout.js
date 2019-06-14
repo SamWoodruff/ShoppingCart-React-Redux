@@ -3,6 +3,7 @@ import Cart from "./Cart";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { confirmCheckout } from "../redux/actions";
+
 const Checkout = (props) => {
   return (
     <div>
@@ -13,7 +14,5 @@ const Checkout = (props) => {
     </div>
   );
 };
-const mapDispatchToProps = dispatch => ({
-    confirmCheckout: ()=>dispatch(confirmCheckout())
-});
-export default connect(null, mapDispatchToProps)(Checkout);
+
+export default connect(null, { confirmCheckout })(Checkout);
