@@ -1,24 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addToCart } from '../redux/actions';
-import {updateQuantity} from '../redux/actions';
 
-const Product = ({ product, addToCart, cart, updateQuantity }) => {
-  const handleOnClick = (product) => {
-    const index = cart.findIndex(item=>item.id === product.id)
-    if(index === -1){
-      addToCart(product);
-    } else {
-      let tempCart = [...cart]
-      tempCart[index].quantity = tempCart[index].quantity + 1
-      
-      updateQuantity(tempCart)
-    }
-  }
-
-
-
-  return (
+const Product = ({ product, addToCart, cart }) => 
+  (
   
     <div className='col s6 m4 l2'>
       <div className="card">
@@ -29,24 +14,19 @@ const Product = ({ product, addToCart, cart, updateQuantity }) => {
           <p className=".tileText"> {product.productName} ${product.price}</p>
         </div>
         <div className="card-action">
-        <button onClick={() => handleOnClick(product)}>Add To Cart</button>
+        <button onClick={() => addToCart(product)}>Add To Cart</button>
         </div>
       </div>
     </div>
  
   );
-};
+
 
 const mapStateToProps = ({cart}) => ({
   cart
 });
 
-const mapDispatchToProps = dispatch => ({
-    addToCart: item => dispatch(addToCart(item)),
-    updateQuantity: (cart) => dispatch(updateQuantity(cart))
-});
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  { addToCart }
 )(Product);
