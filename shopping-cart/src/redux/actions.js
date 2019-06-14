@@ -1,7 +1,10 @@
 export const UPDATE_QUANTITY = "UPDATE_QUANTITY"
+export const ADD_TO_CART= "ADD_TO_CART"
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART"
+export const CONFIRM_CHECKOUT = "CONFIRM_CHECKOUT"
+
 export const updateQuantity = cart => dispatch => dispatch({type:UPDATE_QUANTITY,payload:cart})
 
-export const ADD_TO_CART= "ADD_TO_CART"
 export const addToCart = product => (dispatch, getState) => {
   const { cart } = getState();
 
@@ -17,8 +20,6 @@ export const addToCart = product => (dispatch, getState) => {
   
 }
 
-export const REMOVE_FROM_CART = "REMOVE_FROM_CART"
 export const removeFromCart = item => dispatch => dispatch({type:REMOVE_FROM_CART, payload:item})
 
-export const CONFIRM_CHECKOUT = "CONFIRM_CHECKOUT"
 export const confirmCheckout = () => dispatch => dispatch({type:CONFIRM_CHECKOUT})
